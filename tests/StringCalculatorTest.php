@@ -12,4 +12,9 @@ class StringCalculatorTest extends TestCase
         $this->assertEquals(0,$stringCalculator->add(""));
     }
 
+    public function testOneNumberStringShouldReturnTheNumber() {
+        $stringCalculator = new StringCalculator();
+        $this->assertEquals(1,$stringCalculator->add("1"));
+    }
+
 }

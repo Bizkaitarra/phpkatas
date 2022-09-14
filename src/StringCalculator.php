@@ -11,7 +11,7 @@ class StringCalculator
 
         if (strpos(',\n', $numbers) > 0 || strpos('\n,', $numbers) > 0) {
             //the following input is NOT ok: “1,\n”
-            return 0;
+            throw new \LogicException('The string is not well formed');
         }
 
         $numbers = str_replace('\n', ",", $numbers);

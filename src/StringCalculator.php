@@ -9,10 +9,7 @@ class StringCalculator
             return 0;
         }
 
-        if (strpos(',\n', $numbers) > 0 || strpos('\n,', $numbers) > 0) {
-            //the following input is NOT ok: “1,\n”
-            throw new \LogicException('The string is not well formed');
-        }
+        $this->assertIsValidString($numbers);
 
         $numbers = str_replace('\n', ",", $numbers);
 
@@ -26,6 +23,13 @@ class StringCalculator
 
         return $add;
 
+    }
+
+    private function assertIsValidString(string $numbers): void {
+        if (strpos(',\n', $numbers) > 0 || strpos('\n,', $numbers) > 0) {
+            //the following input is NOT ok: “1,\n”
+            throw new \LogicException('The string is not well formed');
+        }
     }
 
 }

@@ -27,4 +27,9 @@ class StringCalculatorTest extends TestCase
         $this->assertEquals(9,$stringCalculator->add("1,2,6"));
     }
 
+    public function testThatNewLineSeparatorIsAllowed() {
+        $stringCalculator = new StringCalculator();
+        $this->assertEquals(6,$stringCalculator->add('1\n2,3'));
+    }
+
 }

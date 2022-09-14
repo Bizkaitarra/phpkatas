@@ -22,4 +22,9 @@ class StringCalculatorTest extends TestCase
         $this->assertEquals(3,$stringCalculator->add("1,2"));
     }
 
+    public function testMultipleNumberStringShouldReturnTheSum() {
+        $stringCalculator = new StringCalculator();
+        $this->assertEquals(9,$stringCalculator->add("1,2,6"));
+    }
+
 }

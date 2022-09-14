@@ -5,14 +5,18 @@ namespace App;
 class StringCalculator
 {
     public function add(string $numbers): int {
-        if (is_numeric($numbers)) {
-            return $numbers;
+        if ($numbers === '') {
+            return 0;
         }
+
         $numbersAsArray = explode(",", $numbers);
-        if (count($numbersAsArray) === 2) {
-            return (int) $numbersAsArray[0] + (int) $numbersAsArray[1];
+        $add = 0;
+
+        foreach ($numbersAsArray as $number) {
+            $add += (int) $number;
         }
-        return 0;
+
+        return $add;
 
     }
 

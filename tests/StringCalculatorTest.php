@@ -17,4 +17,9 @@ class StringCalculatorTest extends TestCase
         $this->assertEquals(1,$stringCalculator->add("1"));
     }
 
+    public function testTwoNumberStringShouldReturnTheSum() {
+        $stringCalculator = new StringCalculator();
+        $this->assertEquals(3,$stringCalculator->add("1,2"));
+    }
+
 }

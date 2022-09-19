@@ -16,4 +16,9 @@ class IntegerToRomanNumeralConverterTest extends TestCase
         $converter = new IntegerToRomanNumeralConverter();
         $this->assertEquals('II',$converter->__invoke(2));
     }
+
+    public function testTwoShouldReturnIII() {
+        $converter = new IntegerToRomanNumeralConverter();
+        $this->assertEquals('III',$converter->__invoke(3));
+    }
 }

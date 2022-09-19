@@ -21,7 +21,10 @@ class IntegerToRomanNumeralConverter
         if ($number === 7) {
             return 'VII';
         }
-        return 'VIII';
+        if ($number === 8) {
+            return 'VIII';
+        }
+        return 'IX';
 
     }
 

@@ -7,10 +7,7 @@ class IntegerToRomanNumeralConverter
     public function __invoke(int $number):string
     {
         if ($number < 4) {
-            $solution = '';
-            for ($i=0;$i<$number;$i++) {
-                $solution .= 'I';
-            }
+            $solution = str_repeat('I', $number);
             return $solution;
         }
         return 'IV';

@@ -15,7 +15,10 @@ class IntegerToRomanNumeralConverter
         if ($number === 5) {
             return 'V';
         }
-        return 'VI';
+        if ($number === 6) {
+            return 'VI';
+        }
+        return 'VII';
 
     }
 
